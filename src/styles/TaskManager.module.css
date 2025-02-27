@@ -58,14 +58,19 @@
 .taskItem {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: #f9f9f9;
-    padding: 12px;
+    padding: 10px;
     margin-top: 10px;
     border-radius: 5px;
-    width: 100%;
-    max-width: 600px;
-    align-items: center;
+    gap: 10px; /* Add spacing between buttons */
 }
+
+.taskItem button {
+    margin-left: 10px; /* Adds space between "View" and "Delete" buttons */
+    border-radius: 2px;
+}
+
 
 .taskItem strong {
     color: #222;
@@ -77,19 +82,9 @@
     color: gray;
 }
 
-.taskItem button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s;
-}
 
 .taskItem button:hover {
-    background-color: darkred;
+    background-color: rgb(173, 162, 162);
 }
 
 /* Responsive Design */
@@ -118,4 +113,25 @@
         gap: 8px;
         text-align: center;
     }
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
 }
